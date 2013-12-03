@@ -36,7 +36,7 @@ function ReportViewer() {
         height: "",
         margin: "10px auto",
         padding: "10px 0",
-        backgroundColor: "",
+        backgroundColor: "white",
     }
 
     this.note = "";
@@ -64,7 +64,7 @@ function ReportViewer() {
             },
             length: -1,
             config: {
-                margin: "0 0 0 0",
+                margin: "0 20px",
                 padding: "",
 
             }
@@ -101,7 +101,7 @@ function ReportViewer() {
 
     this.footer = {
         text : "",
-        align: "",
+        align: "center",
         cssClass: "",
         custom: "null",
         config: {

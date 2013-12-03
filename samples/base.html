@@ -1,0 +1,41 @@
+﻿<!--This tutorial will show how to use report.js by default-->
+<!--Really easy to use-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+
+    </head>
+    <body style="background-color:gray">
+        <div id="report"></div>
+        <script type="text/javascript" src="jquery/jquery-2.0.3.js"></script>
+        <script src="../report.js" type="text/javascript"></script>
+        <script src="dummy-data/base.js" type="text/javascript"></script>
+        <script type="text/javascript">
+
+            /***** Report *****/
+            var report = new ReportViewer();
+            report.header.text = "Bits & Co"; //header
+            report.title.text = "Recap of Sales"; //title
+            report.headElement.add("Year", "2013"); //add head element
+            report.headElement.add("Month", "August");
+            /*** Add report table ***/
+            /* add column */
+            report.COLUMN.add("#");
+            report.COLUMN.add("Name");
+            report.COLUMN.add("Sale");
+            /* add row */
+            for (var ii = 0; ii < salesData.length; ii++) {
+                report.ROW.add(salesData[ii]);
+            }
+            /*** End of Add report table ***/
+            report.footer.text = "Bits & Co"; //set footer
+            makeReport("#report", report); //make report
+            /***** End of Report *****/
+
+        </script>
+    </body>
+</html>
