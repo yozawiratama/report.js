@@ -4,9 +4,16 @@ Report.js
 
 Coming soon
 
+#Updates
+version 0.6
+<pre>
+create minimalis report
+</pre>
+
 #Download
-Download newest version :
+Download newest version and sample code :
 <a href="https://github.com/yozawiratama/report.js/archive/master.zip">Download Here</a>
+
 #Install
 Place report.js after jquery.
 <pre>&lt;script src="path/to/jquery.js" &gt;&lt;/script&gt;
@@ -25,7 +32,8 @@ Give this project star, this will make us more spirit.
 </pre>
 <pre>
 <b>Feedback</b>
-Your feedback is the best support for us to make better report.js
+Your feedback is the best support for us to make better report.js.
+<a href="https://docs.google.com/forms/d/1Xz9tY47aGu2A2JFEwOCjrxtNsVjC0S74yI78bIkXG7k/viewform">feedback</a>
 </pre>
 <pre>
 <b>Share</b>
@@ -45,3 +53,5 @@ with subject start with [report.js]
 
 
 or you can contact us with <a href="https://docs.google.com/forms/d/1p6taVhkzvFdVipJSGAP-Zwde99QGlSXgdkXK64uQ-WE/viewform">this form</a>
+
+You can also send us <a href="https://docs.google.com/forms/d/1Xz9tY47aGu2A2JFEwOCjrxtNsVjC0S74yI78bIkXG7k/viewform">feedback</a>.
