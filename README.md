@@ -2,7 +2,12 @@ Report.js
 =========
 #Overview
 
-Coming soon
+Presenting data (making report) is a stressful task for programmers. They usually used a framework to help them out. But, many of frameworks can not be edited. And of course this is a very annoying things for those who want to  make their report more enchanting. May be it  ever happen to you guys. 
+So here it is. the solution ! 
+Report.js. 
+Report.js is framework/library which was developed to help you making a creative report, so that the  stressfull task becomes a delightfull task.  You can make a report with your own style,  also you can do it while enjoying a cup of coffee and pizza ! 
+Report.js was build up with javascript language, and focused on OOP (Object Oriented Programme).
+Report.js still have many weakness, but we do our best to make Report Js becomes better and better. 
 
 #Updates
 version 0.6
