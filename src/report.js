@@ -6,6 +6,11 @@
 //! please support us with donate, feedback and do not acknowledge as privately owned
 //! support us with donation : (paypal) y_wiratama@yahoo.com
 
+//!!! README before you change this source code
+//!!! We share this source code so as you can contribute with this project or help you to understand how report.js works.
+//!!! Do not acknowledge as privately owned
+//!!! You can re-develop report.js and naming with your own, but dont forget refer report.js and let us know about your creation. 
+
 function ReportViewer() {
     var colCounter = 0;
     var rowCounter = 0;
@@ -21,7 +26,7 @@ function ReportViewer() {
         custom: "null",
         align: "center",
         config: {
-            margin: "2px auto 10px",
+            margin: "2px auto 10px"
         }
     }
 
@@ -36,7 +41,7 @@ function ReportViewer() {
         height: "",
         margin: "10px auto",
         padding: "10px 0",
-        backgroundColor: "white",
+        backgroundColor: "white"
     }
 
     this.note = "";
@@ -65,7 +70,7 @@ function ReportViewer() {
             length: -1,
             config: {
                 margin: "0 20px",
-                padding: "",
+                padding: ""
 
             }
         };
@@ -105,7 +110,7 @@ function ReportViewer() {
         cssClass: "",
         custom: "null",
         config: {
-            margin: "10px auto 0px",
+            margin: "10px auto 0px"
 
         }
     };
