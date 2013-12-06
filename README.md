@@ -8,6 +8,7 @@ So here it is the solution !!! </p>
 <p>Report.js is a framework which was developed to help you making a creative report, so that the  stressfull task becomes a delightfull task.  You can make a report with your own style,  also you can do it while enjoying a cup of coffee and pizza ! </p>
 <p>Report.js was built up with javascript language, and focused on OOP (Object Oriented Programme).</P>
 <p>Report.js still have many weakness, but we do our best to make Report Js becomes better and better. </p>
+find how easy to use Report.js <a href="https://github.com/yozawiratama/report.js/wiki/Welcome-to-Report.js!">here</a>. 
 
 #Updates
 version 0.6
@@ -24,8 +25,10 @@ Place report.js after jquery.
 <pre>&lt;script src="path/to/jquery.js" &gt;&lt;/script&gt;
 &lt;script src="path/to/report.js" &gt;&lt;/script&gt;</pre>
 We suggest you use report.js file from folder named dist.
+
 #Docs
-Coming soon
+Your can find simple way to understand Report.js in <a href="https://github.com/yozawiratama/report.js/wiki/">here</a>.
+
 #Support us
 Support us with :
 <pre>

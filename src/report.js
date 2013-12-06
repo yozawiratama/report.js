@@ -11,7 +11,7 @@
 //!!! Do not acknowledge as privately owned
 //!!! You can re-develop report.js and naming with your own, but dont forget refer report.js and let us know about your creation. 
 
-function ReportViewer() {
+function ReportJs() {
     var colCounter = 0;
     var rowCounter = 0;
     var headElm = 0;
@@ -41,7 +41,9 @@ function ReportViewer() {
         height: "",
         margin: "10px auto",
         padding: "10px 0",
-        backgroundColor: "white"
+        backgroundColor: "white",
+        textColor: "",
+        cssClass: ""
     }
 
     this.note = "";
@@ -51,6 +53,8 @@ function ReportViewer() {
             height: "",
             margin: "10px auto",
             padding: "",
+            backgroundColor: "",
+            textColor: "",
             cssClass : ""
         }
     }
@@ -69,13 +73,16 @@ function ReportViewer() {
             },
             length: -1,
             config: {
-                margin: "0 20px",
-                padding: ""
+                margin: "0 auto",
+                padding: "0 20px;",
+                cssClass: "",
+                backgroundColor: "",
+                textColor: ""
 
             }
         };
 
-    this.COLUMN =
+    this.column =
     {
 
         add: function (colName) {
@@ -88,10 +95,15 @@ function ReportViewer() {
         get: function (index) {
             return columns[index].name;
         },
-        length: -1
+        length: -1,
+        config:{
+            backgroundColor: "",
+            textColor: "",
+            cssClass: ""
+        }
     };
 
-    this.ROW = {
+    this.row = {
         add: function (rowData) {
             var row = rowData;
             rows[rowCounter] = row;
@@ -101,7 +113,12 @@ function ReportViewer() {
         get: function (index) {
             return rows[index];
         },
-        length: -1
+        length: -1,
+        config:{
+            backgroundColor: "",
+            textColor: "",
+            cssClass: ""
+        }
     };
 
     this.footer = {
@@ -110,7 +127,10 @@ function ReportViewer() {
         cssClass: "",
         custom: "null",
         config: {
-            margin: "10px auto 0px"
+            margin: "10px auto 0px",
+            cssClass : "",
+            textColor: "",
+            backgroundColor: ""
 
         }
     };
@@ -132,7 +152,7 @@ function makeReport(selector, report) {
     obj.css('margin', r.config.margin);
     obj.css('background-color', r.config.backgroundColor);
     obj.css('padding', r.config.padding);
-
+    obj.css('color', r.config.textColor);
     
 
 
@@ -162,14 +182,17 @@ function makeReport(selector, report) {
 
 
     /***** HEAD ELEMENT *****/
-    obj.append('<table id=\"headElement\" ></table>');
+    obj.append('<div id=\"headElement\"><table></table></div>');
     var headElem = $('#headElement');
+    headElem.width(r.table.config.width);
+    headElem.css('margin', r.headElement.config.margin);
+    headElem.css('padding', r.headElement.config.padding);
     if (r.headElement.length > -1) {
         for (var ii = 0; ii < r.headElement.length; ii++) {
-            headElem.append('<tr><td>' + r.headElement.get(ii).name + '</td><td>:</td><td>' + r.headElement.get(ii).value + '</td></tr>');
+            headElem.children('table').append('<tr><td>' + r.headElement.get(ii).name + '</td><td>:</td><td>' + r.headElement.get(ii).value + '</td></tr>');
         }
     }
-    headElem.css('margin', r.headElement.config.margin);
+    
 
 
     /***** TABLE *****/
@@ -181,13 +204,15 @@ function makeReport(selector, report) {
     table.children('thead').css('color', 'white');
     table.width(r.table.config.width);
     table.addClass(r.table.config.cssClass);
-    for (var ii = 0; ii < r.COLUMN.length; ii++) {
-        table.children('thead').children('tr').append('<th>' + r.COLUMN.get(ii) + '</th>');
+    for (var ii = 0; ii < r.column.length; ii++) {
+        table.children('thead').children('tr').append('<th>' + r.column.get(ii) + '</th>');
     }
-    for (var ii = 0; ii < r.ROW.length; ii++) {
+    table.children('thead').children('tr').children('th').css('background-color', r.column.config.backgroundColor);
+    table.children('thead').children('tr').children('th').css('color', r.column.config.textColor);
+    for (var ii = 0; ii < r.row.length; ii++) {
         var rowItem = "";
-        for (var jj = 0; jj < r.COLUMN.length; jj++) {
-            rowItem += "<td>" + r.ROW.get(ii)[jj] + "</td>";
+        for (var jj = 0; jj < r.column.length; jj++) {
+            rowItem += "<td>" + r.row.get(ii)[jj] + "</td>";
         }
         table.children('tbody').append('<tr>' + rowItem + '</tr>');
 

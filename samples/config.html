@@ -1,28 +1,34 @@
-﻿<!--This tutorial will show how to use report.js by default-->
-<!--Really easy to use-->
-
 <!DOCTYPE html>
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Report.js base</title>
-
+        <title>Report.js config</title>
     </head>
-    <body style="background-color:gray">
+    <body>
         <div id="report"></div>
+
+
         <script type="text/javascript" src="jquery/jquery-2.0.3.js"></script>
         <script src="../dist/report.js" type="text/javascript"></script>
         <script src="dummy-data/base.js" type="text/javascript"></script>
         <script type="text/javascript">
-
             /***** Report *****/
+            /***** Report config *****/
             var report = new ReportJs();
+            report.config.backgroundColor = "Gray"; //Page Background
+            report.config.textColor = "white"; //Page TextColor
+            report.table.config.width = "80%";
+            report.table.config.backgroundColor = "#e5e5e5";
+            report.column.config.backgroundColor = "black";
+            report.column.config.textColor = "yellow";
+
             report.header.text = "Bits & Co"; //header
             report.title.text = "Recap of Sales"; //title
             report.headElement.add("Year", "2013"); //add head element
             report.headElement.add("Month", "August");
             /*** Add report table ***/
+            
             /* add column */
             report.column.add("#");
             report.column.add("Name");
@@ -35,7 +41,6 @@
             report.footer.text = "Bits & Co"; //set footer
             makeReport("#report", report); //make report
             /***** End of Report *****/
-
         </script>
     </body>
 </html>
